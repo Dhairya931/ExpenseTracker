@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Header from '../../Header/header';
+import Header from '../../Header';
 import Cards from '../../Cards';
 import { Modal } from 'antd';
 import AddIncomeModal from '../../Modals/AddIncome';
@@ -10,7 +10,7 @@ import { auth, db } from '../../../firebase';
 import { toast } from 'react-toastify';
 import TransactionTable from '../../Table/Table';
 import Chart from '../../Charts';
-import NoTransactions from '../../NoTransaction/NoTransactions';
+import NoTransactions from '../../NoTransactions';
 
 function Dashboard() {
   const [user] = useAuthState(auth);

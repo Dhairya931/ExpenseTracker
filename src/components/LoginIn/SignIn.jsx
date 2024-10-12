@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Input from '../Input/Input'
+import Input from '../Input'
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { toast } from 'react-toastify';
 import { auth ,provider } from '../../firebase';
