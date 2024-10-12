@@ -1,0 +1,8 @@
+.my-card{
+    min-width:500px;
+}
+.ant-card-head-title{
+    margin:0;
+    font-size:25px;
+    font-weight: 400;
+}
