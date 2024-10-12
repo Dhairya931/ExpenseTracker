@@ -1,5 +1,4 @@
 import React,{useState} from 'react'
-import Input from '../Input';
 import {createUserWithEmailAndPassword } from "firebase/auth";
 import {db,auth,provider,doc,setDoc} from '../../firebase';
 import { toast } from 'react-toastify';
@@ -7,6 +6,7 @@ import SignIn from './SignIn';
 import { useNavigate } from 'react-router-dom';
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { getDoc } from 'firebase/firestore';
+import Input from '../Input';
 
 function LogIn() {
   const[firstname,setName]=useState("");
