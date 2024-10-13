@@ -53,7 +53,8 @@ function LogIn() {
     else{
       toast.error("All fields are mandatory!!");
     }
-  }
+  };
+
   function googleAuth(e){
     e.preventDefault();
     signInWithPopup(auth, provider)
@@ -83,8 +84,8 @@ function LogIn() {
     try{
       await setDoc(doc(db,"users",user.uid),{
         displayname:user.displayName?user.displayName:"",
-        name:user.name ? user.name :"" ,
-        lastname:user.lastname ? user.lastname: "",
+        name:firstname ,
+        lastname:lastname,
         PhotoURL:user.photoURL ? user.photoURL:"",
         email:user.email ? user.email:"",
         password:user.password ? user.password:"",
