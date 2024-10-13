@@ -16,6 +16,30 @@ function LogIn() {
   const [loginform, setLoginform] = useState(false);
   const navigate = useNavigate();
 
+  const CreateDoc = async (user) => {
+    if (!user) return;
+
+    const docRef = doc(db, "users", user.uid);
+    const snapshot = await getDoc(docRef);
+
+    if (!snapshot.exists()) {
+      try {
+        await setDoc(doc(db, "users", user.uid), {
+          displayname: user.displayName ? user.displayName : "",
+          name: user.name? user.name:"", // use local state for name
+          lastname: user.lastname?user.lastname:"", // use local state for lastname
+          PhotoURL: user.photoURL ? user.photoURL : "",
+          email: user.email ? user.email : "",
+          password: user.password?user.password:"", // use local state for password
+        });
+      } catch (e) {
+        toast.error(e.message);
+      }
+    } else {
+      console.log("Doc Exists");
+    }
+  };
+
   const signupWithEmail = (e) => {
     e.preventDefault();
     console.log("FirstName", firstname);
@@ -62,31 +86,6 @@ function LogIn() {
         const errorMessage = error.message;
         toast.error(errorMessage);
       });
-  };
-
-  // Move the CreateDoc function outside of googleAuth so it can be used in both signupWithEmail and googleAuth
-  const CreateDoc = async (user) => {
-    if (!user) return;
-
-    const docRef = doc(db, "users", user.uid);
-    const snapshot = await getDoc(docRef);
-
-    if (!snapshot.exists()) {
-      try {
-        await setDoc(doc(db, "users", user.uid), {
-          displayname: user.displayName ? user.displayName : "",
-          name: firstname, // use local state for name
-          lastname: lastname, // use local state for lastname
-          PhotoURL: user.photoURL ? user.photoURL : "",
-          email: user.email ? user.email : "",
-          password: password, // use local state for password
-        });
-      } catch (e) {
-        toast.error(e.message);
-      }
-    } else {
-      console.log("Doc Exists");
-    }
   };
 
   return (
