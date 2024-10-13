@@ -16,7 +16,7 @@ function LogIn() {
   const [loginform, setLoginform] = useState(false);
   const navigate = useNavigate();
 
-  const CreateDoc = async (user) => {
+  const Creation = async (user) => {
     if (!user) return;
 
     const docRef = doc(db, "users", user.uid);
@@ -58,7 +58,7 @@ function LogIn() {
             setEmail("");
             setPassword("");
             setConfirmpassword("");
-            CreateDoc(user); // Call CreateDoc function here
+            Creation(user); // Call CreateDoc function here
             navigate("/dashboard");
           })
           .catch((error) => {
@@ -79,7 +79,7 @@ function LogIn() {
       .then((result) => {
         const user = result.user;
         toast.success("SignIn Successfully!!");
-        CreateDoc(user); // Call CreateDoc function here
+        Creation(user); // Call CreateDoc function here
         navigate("/dashboard");
       })
       .catch((error) => {
