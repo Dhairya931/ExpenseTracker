@@ -26,11 +26,11 @@ function LogIn() {
       try {
         await setDoc(doc(db, "users", user.uid), {
           displayname: user.displayName ? user.displayName : "",
-          name: user.name? user.name:"", // use local state for name
-          lastname: user.lastname?user.lastname:"", // use local state for lastname
+          name: firstname, // use local state for name
+          lastname: lastname, // use local state for lastname
           PhotoURL: user.photoURL ? user.photoURL : "",
           email: user.email ? user.email : "",
-          password: user.password?user.password:"", // use local state for password
+          password: password, // use local state for password
         });
       } catch (e) {
         toast.error(e.message);
