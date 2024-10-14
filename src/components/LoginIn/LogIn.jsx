@@ -33,7 +33,7 @@ function LogIn() {
           password: password, // use local state for password
         });
       } catch (e) {
-        toast.error(Hello);
+        toast.error(e.message);
       }
     } else {
       console.log("Doc Exists");
