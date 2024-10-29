@@ -33,7 +33,7 @@ function Header() {
       <header className="shadow-md sticky-header">
         <div className="flex h-16 max-w-screen items-center gap-8 px-4 sm:px-6 lg:px-8">
           <a className="text-teal-600 flex items-center" href="#">
-            <img className="w-12" src="src/assets/Expense.png" />
+            <img className="w-12" src="public\assets\transactions.svg" />
             <p className="text-xl font-bold">ExpenseTracker</p>
           </a>
 

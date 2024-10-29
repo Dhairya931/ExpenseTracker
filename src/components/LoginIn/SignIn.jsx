@@ -71,7 +71,7 @@ function SignIn() {
       <div className="hidden lg:relative lg:block lg:p-12">
         <a className="block text-white" href="#">
           <span className="sr-only">Home</span>
-         <img className=" w-11"src='src\assets\Expense.png'/>
+         <img className=" w-11"src='public\assets\transactions.svg'/>
         </a>
 
         <h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
@@ -94,7 +94,7 @@ function SignIn() {
             href="#"
           >
             <span className="sr-only">Home</span>
-            <img src='src\assets\Expense.png' />
+            <img src='public\assets\transactions.svg' />
           </a>
 
           <h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
