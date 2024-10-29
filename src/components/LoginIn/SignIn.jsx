@@ -94,7 +94,7 @@ function SignIn() {
             href="#"
           >
             <span className="sr-only">Home</span>
-            <img src='public/assets/Expense.png' />
+            <img src='/assets/Expense.png' />
           </a>
 
           <h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
