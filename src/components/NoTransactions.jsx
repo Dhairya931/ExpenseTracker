@@ -1,5 +1,5 @@
 import React from 'react'
-import transactions from '../assets/transactions.svg'
+import transactions from '/assets/transactions.svg'
 function NoTransactions() {
   return (
     <div className='flex justify-center items-center w-full flex-col mb-8'>
