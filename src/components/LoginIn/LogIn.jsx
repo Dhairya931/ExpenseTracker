@@ -106,7 +106,7 @@ function LogIn() {
                   <div className="hidden lg:relative lg:block lg:p-12">
                     <a className="block text-white" href="#">
                       <span className="sr-only">Home</span>
-                      <img className="w-11" src="public\assets\transactions.svg" />
+                      <img className="w-11" src="public/assets/Expense.png" />
                     </a>
                     <h2 className="mt-6 text-2xl font-bold text-white sm:text-3xl md:text-4xl">
                       Welcome to ExpenseTracker
@@ -124,7 +124,7 @@ function LogIn() {
                         href="#"
                       >
                         <span className="sr-only">Home</span>
-                        <img src="public\assets\transactions.svg" />
+                        <img src="public/assets/Expense.png" />
                       </a>
                       <h1 className="mt-2 text-2xl font-bold text-gray-900 sm:text-3xl md:text-4xl">
                         Welcome to ExpenseTracker
